@@ -1,4 +1,5 @@
 from google.cloud import bigquery
+import streamlit as st
 import uuid
 from datetime import datetime
 
@@ -6,7 +7,7 @@ credentials = st.secrets["gcp_service_account"]
 
 client = bigquery.Client.from_service_account_info(credentials)
 
-TABLE_ID = "mi_proyecto.mi_dataset.formulario"
+TABLE_ID = "python-project-400302.mi_dataset.formulario"
 
 def insertar_datos(data):
     rows = [
