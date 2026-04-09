@@ -1,4 +1,7 @@
 import streamlit as st
+
+st.write("Probando conexión...")
+st.write(st.secrets)
 import sys
 import os
 
