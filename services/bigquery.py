@@ -2,7 +2,9 @@ from google.cloud import bigquery
 import uuid
 from datetime import datetime
 
-client = bigquery.Client.from_service_account_json("credentials.json")
+credentials = st.secrets["gcp_service_account"]
+
+client = bigquery.Client.from_service_account_info(credentials)
 
 TABLE_ID = "mi_proyecto.mi_dataset.formulario"
 
